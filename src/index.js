@@ -1,5 +1,31 @@
-import './index.css';
 
-document.getElementById('root').innerHTML = 'Hello World';
+const menu = {
+	courses: {
+		appetizers: [],
+		mains: [],
+		desserts: []
+	},
 
-alert('Hello World!');
+	set appetizers() {
+
+	},
+
+	get appetizers() {
+
+	},
+	set mains() {
+
+	},
+
+	set mains() {
+
+	},
+	set desserts() {
+
+	}, 
+
+	get desserts() {
+
+	}
+
+};
