@@ -1,9 +1,16 @@
 
 const menu = {
 	courses: {
+		get courses() {
+			return {
+				appetizers: this.courses.appetizers,
+				mains: this.courses.mains,
+				desserts: this.courses.desserts
+			}
+		},
 		appetizers: [],
 		mains: [],
-		desserts: []
+		desserts: [],
 	},
 
 	set appetizers() {
