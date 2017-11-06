@@ -1,5 +1,9 @@
 
 const menu = {
+	addDishToCourse(courseName, dishName, dishPrice) {
+
+	}
+};
 	courses: {
 		get courses() {
 			return {
