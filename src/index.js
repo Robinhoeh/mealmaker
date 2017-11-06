@@ -1,40 +1,35 @@
 const menu = {
 
-	courses: {
+	_courses: {
 
-		appetizers: [],
-		mains: [],
-		desserts: [],
+		_appetizers: [],
+		_mains: [],
+		_desserts: [],
 
-	set appetizers(appetizerIn) {
-		this.appetizers.push(appetizerIn);
+		get appetizers() {
+		  return this._appetizers
 		},
-
-	get appetizers() {
-		return this.appetizers;
-	},
-
-	set mains(mainIn) {
-		this.mains.push(mainIn);
-	},
-
-	get mains(){
-		return this.mains;
-	},
-
-	set desserts(dessertIn) {
-		this.desserts.push(dessertIn)
-	}, 
-
-	get desserts() {
-		return this.desserts;
-	},
+		set appetizers(appetizerIn) {
+		  this._appetizers.push(appetizerIn);
+		},
+		get mains() {
+		   return this._mains
+		 },
+		set mains(mainIn){
+		  this._mains.push(mainIn);
+		},
+		get desserts() {
+		   return this._desserts;
+		 },
+		set desserts(dessertIn) {
+		  this._desserts.push(dessertIn);
+		},
 
 	get courses() {
 		return {
-			appetizers: this.courses.appetizers,
-			mains: this.courses.mains,
-			desserts: this.courses.desserts
+			_appetizers: this.courses.appetizers,
+			_mains: this.courses.mains,
+			_desserts: this.courses.desserts
 		}
 	},
 
