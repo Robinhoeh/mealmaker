@@ -1,7 +1,7 @@
 
 const menu = {
 	addDishToCourse(courseName, dishName, dishPrice) {
-		const dish{
+		const dish = {
 			name: 'pasta',
 			price: 10.99;
 		};
