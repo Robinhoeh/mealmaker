@@ -13,11 +13,11 @@ const menu = {
 	},
 
 	get appetizers() {
-		return this._appetizers;
+		return this.appetizers;
 	},
 
-	set mains(mainsIn) {
-		this.mains.push(mainsIn);
+	set mains(mainIn) {
+		this.mains.push(mainIn);
 	},
 
 	get mains(){
