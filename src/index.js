@@ -59,4 +59,11 @@ const menu = {
 		having ${desserts}. The winter special is on for ${totalPrice}`;
 	};
 
+	menu.addDishToCourse('appetizers', 'salad', 12);
+	menu.addDishToCourse('mains', 'cheese', 13);
+
+};
+
+const generateRandomMeal = () => {
+	
 };
