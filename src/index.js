@@ -7,20 +7,23 @@ const menu = {
 		desserts: [],
 	},
 
-	set appetizers() {
-
+	set appetizers(appetizerIn) {
+		this.appetizers.push(appetizerIn);
+		},
 	},
 
 	get appetizers() {
-
-	},
-	set mains() {
-
+		return this._appetizers;
 	},
 
-	set mains() {
-
+	set mains(mainsIn) {
+		this.mains.push(mainsIn);
 	},
+
+	get mains(){
+		return.this.appetizers;
+	},
+
 	set desserts() {
 
 	}, 
@@ -50,7 +53,7 @@ const menu = {
 		const randomIndex = Math.floor( Math.random () * dishes.length);
 	};
 
-	const generateRandomMean = () => {
+	const generateRandomMeal = () => {
 		const appetizers = this.getRandomDishFromCourse('appetizers');
 		const mains = this.getRandomDishFromCourse('mains');
 		const desserts = this.getRandomDishFromCourse('desserts');
@@ -59,11 +62,16 @@ const menu = {
 		having ${desserts}. The winter special is on for ${totalPrice}`;
 	};
 
+};
+
 	menu.addDishToCourse('appetizers', 'salad', 12);
 	menu.addDishToCourse('mains', 'cheese', 13);
 
-};
 
-const generateRandomMeal = () => {
-	
-};
+const meal = menu.generateRandomMeal();
+
+console.log(meal);
+
+
+
+
