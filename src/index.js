@@ -1,7 +1,11 @@
 
 const menu = {
 	addDishToCourse(courseName, dishName, dishPrice) {
-
+		const dish{
+			name: 'pasta',
+			price: 10.99;
+		};
+		this.courses[courseName].push(dish)
 	}
 };
 	courses: {
