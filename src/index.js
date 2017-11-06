@@ -5,12 +5,10 @@ const menu = {
 		appetizers: [],
 		mains: [],
 		desserts: [],
-	},
 
 	set appetizers(appetizerIn) {
 		this.appetizers.push(appetizerIn);
 		},
-	},
 
 	get appetizers() {
 		return this.appetizers;
@@ -21,16 +19,17 @@ const menu = {
 	},
 
 	get mains(){
-		return.this.appetizers;
+		return this.mains;
 	},
 
-	set desserts() {
-
+	set desserts(dessertIn) {
+		this.desserts.push(dessertIn)
 	}, 
 
 	get desserts() {
+		return this.desserts;
+	},
 
-	}
 	get courses() {
 		return {
 			appetizers: this.courses.appetizers,
@@ -42,7 +41,7 @@ const menu = {
 	addDishToCourse(courseName, dishName, dishPrice) {
 		const dish = {
 			name: dishName,
-			price: dishPrice;
+			price: dishPrice
 		};
 		this.courses[courseName].push(dish)
 	},
@@ -51,7 +50,7 @@ const menu = {
 	getRandomDishFromCourse(courseName) {
 		const dishes = this.courses[courseName];
 		const randomIndex = Math.floor( Math.random () * dishes.length);
-	};
+	},
 
 	const generateRandomMeal = () => {
 		const appetizers = this.getRandomDishFromCourse('appetizers');
