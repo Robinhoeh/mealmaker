@@ -38,10 +38,25 @@ const menu = {
 
 	addDishToCourse(courseName, dishName, dishPrice) {
 		const dish = {
-			name: 'pasta',
-			price: 10.99;
+			name: dishName,
+			price: dishPrice;
 		};
 		this.courses[courseName].push(dish)
 	},
+
+	// Get randomized dish
+	getRandomDishFromCourse(courseName) {
+		const dishes = this.courses[courseName];
+		const randomIndex = Math.floor( Math.random () * dishes.length);
+	};
+
+	const generateRandomMean = () => {
+		const appetizers = this.getRandomDishFromCourse('appetizers');
+		const mains = this.getRandomDishFromCourse('mains');
+		const desserts = this.getRandomDishFromCourse('desserts');
+		const totalPrice = appetizers.price + mains.name + desserts.name;
+		return `For starters, you will be having the ${appetizers} followed by ${mains} and for dessert you wil be
+		having ${desserts}. The winter special is on for ${totalPrice}`;
+	};
 
 };
