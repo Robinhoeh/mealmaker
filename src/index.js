@@ -23,7 +23,8 @@ const menu = {
 		 },
 		set desserts(dessertIn) {
 		  this._desserts.push(dessertIn);
-		},
+		}
+	},
 
 	get courses() {
 		return {
