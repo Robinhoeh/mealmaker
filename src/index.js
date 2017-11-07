@@ -61,8 +61,14 @@ const menu = {
 
 	menu.addDishToCourse('appetizers', 'salad', 12);
 	menu.addDishToCourse('appetizers', 'soup', 7);
+	menu.addDishToCourse('appetizers', 'bread', 3);
 	menu.addDishToCourse('mains', 'cheese', 13);
+	menu.addDishToCourse('mains', 'steak', 34);
+	menu.addDishToCourse('mains', 'fish', 45);
 	menu.addDishToCourse('desserts', 'cake', 5);
+	menu.addDishToCourse('desserts', 'full cake', 32);
+	menu.addDishToCourse('desserts', 'entire tub of ice cream', 53);
+
 
 
 let meal = menu.generateRandomMeal();
