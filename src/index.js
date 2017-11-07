@@ -49,19 +49,20 @@ const menu = {
 		return dishes [randomIndex];
 	},
 
-	let generateRandomMeal = () => {
+	generateRandomMeal () {
 		const appetizers = this.getRandomDishFromCourse('appetizers');
 		const mains = this.getRandomDishFromCourse('mains');
 		const desserts = this.getRandomDishFromCourse('desserts');
-		const totalPrice = appetizers.price + mains.name + desserts.name;
+		const totalPrice = appetizers.price + mains.price + desserts.price;
 		return `For starters, you will be having the ${appetizers} followed by ${mains} and for dessert you wil be
 		having ${desserts}. The winter special is on for ${totalPrice}`;
-	};
+	},
 
 };
 
 	menu.addDishToCourse('appetizers', 'salad', 12);
 	menu.addDishToCourse('mains', 'cheese', 13);
+	menu.addDishToCourse('desserts', 'cake', 5);
 
 
 let meal = menu.generateRandomMeal();
