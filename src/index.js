@@ -54,13 +54,13 @@ const menu = {
 		const mains = this.getRandomDishFromCourse('mains');
 		const desserts = this.getRandomDishFromCourse('desserts');
 		const totalPrice = appetizers.price + mains.price + desserts.price;
-		return `For starters, you will be having the ${appetizers} followed by ${mains} and for dessert you wil be
-		having ${desserts}. The winter special is on for ${totalPrice}`;
+		return `For starters, you will be having the ${appetizers.name} followed by ${mains.name} and for dessert you will be having ${desserts.name}. The winter special is on for $${totalPrice}.`;
 	},
 
 };
 
 	menu.addDishToCourse('appetizers', 'salad', 12);
+	menu.addDishToCourse('appetizers', 'soup', 7);
 	menu.addDishToCourse('mains', 'cheese', 13);
 	menu.addDishToCourse('desserts', 'cake', 5);
 
