@@ -1,16 +1,16 @@
 const menu = {
 
-	_courses: {
+	_courses: {//property of menu object
 
-		_appetizers: [],
+		_appetizers: [],//properties of courses object
 		_mains: [],
 		_desserts: [],
 
 		get appetizers() {
-		  return this._appetizers
+		  return this._appetizers//returning appetizers property
 		},
-		set appetizers(appetizerIn) {
-		  this._appetizers.push(appetizerIn);
+		set appetizers(appetizerIn) {//passing appetizer item
+		  this._appetizers.push(appetizerIn);//pushes passed item into appetizers array above
 		},
 		get mains() {
 		   return this._mains
@@ -26,11 +26,11 @@ const menu = {
 		}
 	},
 
-	get courses() {
+	get courses() {//inside menu object - pulling courses from this._courses
 		return {
-			_appetizers: this.courses.appetizers,
-			_mains: this.courses.mains,
-			_desserts: this.courses.desserts
+			appetizers: this._courses._appetizers,
+			mains: this._courses._mains,
+			desserts: this._courses._desserts
 		}
 	},
 
@@ -46,6 +46,7 @@ const menu = {
 	getRandomDishFromCourse(courseName) {
 		const dishes = this.courses[courseName];
 		const randomIndex = Math.floor( Math.random () * dishes.length);
+		return dishes [randomIndex];
 	},
 
 	let generateRandomMeal = () => {
