@@ -48,7 +48,7 @@ const menu = {
 		const randomIndex = Math.floor( Math.random () * dishes.length);
 	},
 
-	const generateRandomMeal = () => {
+	let generateRandomMeal = () => {
 		const appetizers = this.getRandomDishFromCourse('appetizers');
 		const mains = this.getRandomDishFromCourse('mains');
 		const desserts = this.getRandomDishFromCourse('desserts');
@@ -63,8 +63,7 @@ const menu = {
 	menu.addDishToCourse('mains', 'cheese', 13);
 
 
-const meal = menu.generateRandomMeal();
-
+let meal = menu.generateRandomMeal();
 console.log(meal);
 
 
